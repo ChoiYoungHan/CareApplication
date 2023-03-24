@@ -9,8 +9,14 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CareApplication"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
+        <activity
+            android:name=".DiaryPage"
+            android:exported="false" />
+        <activity
+            android:name=".Diary_calendarPage"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
