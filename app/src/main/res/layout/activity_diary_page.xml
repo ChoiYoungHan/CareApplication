@@ -8,10 +8,112 @@
     android:background="@color/white"
     tools:context=".DiaryPage">
 
-    <TextView
-        android:id="@+id/Tv_Date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+
+        <ImageView
+            android:id="@+id/Iv_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.13"
+            android:src="@drawable/back"
+            android:padding="12dp"
+            />
+
+        <TextView
+            android:id="@+id/Tv_Date"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:text=""
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center|start"
+            android:autoSizeMaxTextSize="22sp"
+            android:autoSizeMinTextSize="18sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:paddingLeft="3dp"
+            />
+
+        <TextView
+            android:id="@+id/Tv_Complete"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.27"
+            android:text="완료"
+            android:textColor="#8A3C3C"
+            android:textStyle="bold"
+            android:gravity="center|end"
+            android:autoSizeMaxTextSize="16sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:paddingRight="20dp"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.76"
+        android:padding="5dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="내용을 입력해주세요."
+            android:textColorHint="#CCCCCC"
+            android:inputType="textMultiLine"
+            android:minLines="1"
+            android:textColor="@color/black"
+            android:background="@drawable/edittext_border"
+            android:padding="5dp"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.17"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:padding="5dp"
+        >
+
+        <Button
+            android:id="@+id/Btn_GetImage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="#22000000"
+            android:text="이미지 불러오기"
+            android:textColor="#86000000"
+            android:autoSizeMaxTextSize="14sp"
+            android:autoSizeMinTextSize="8sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RV_ImageView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:layout_marginLeft="5dp"
+            />
+
+    </LinearLayout>
 
 
 </LinearLayout>

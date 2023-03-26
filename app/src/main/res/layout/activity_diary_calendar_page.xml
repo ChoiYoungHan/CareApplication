@@ -8,13 +8,67 @@
     android:background="@color/white"
     tools:context=".Diary_calendarPage">
 
-    <CalendarView
-        android:id="@+id/Calendar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#31000000"
-        android:layout_marginTop="50dp"
-        />
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+
+        <ImageView
+            android:id="@+id/Iv_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.13"
+            android:src="@drawable/back"
+            android:padding="12dp"
+            />
+
+        <TextView
+            android:id="@+id/Tv_Calendar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center|start"
+            android:autoSizeMaxTextSize="22sp"
+            android:autoSizeMinTextSize="18sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:paddingLeft="3dp"
+            android:text="캘린더"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:paddingRight="5dp"
+            android:layout_weight="0.8"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.86"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        >
+
+        <CalendarView
+            android:id="@+id/Calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#31000000"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        >
+
+    </LinearLayout>
 
 
 
